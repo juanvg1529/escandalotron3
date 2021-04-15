@@ -1,5 +1,4 @@
-
-/*a funtion that alert the usuary if the  */
+/*a funtion that alert the usuary if the noise is loud, normal or not that loud  */
 function escandalotron3() {
   let num1, num2, num3;
   num1 = Number(prompt("Type number 1"));
@@ -17,11 +16,13 @@ function escandalotron3() {
       if (typeof num3 === "string" || isNaN(num3)) {
         alert("Error typing number3, please type a number");
       } else {
-        
       }
     }
   }
- //validation that num1,num2 & nume aren't empty
+  if (num1 + num2 + num3 === 0) {
+    alert("There is not entries");
+  }
+  //validation that num1,num2 & nume aren't empty
   if (num1 != null && num2 != null && num2 != null) {
     //first action, tha noise its not that loud
     if (num1 + num2 + num3 < 30 && num1 + num2 + num3 > 0) {
